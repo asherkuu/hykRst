@@ -10,7 +10,7 @@
 		</property>
 	</bean>
 
-	<!-- SqlSession setup for MyBatis Database Layer -->
+	<!-- SqlSession setup for MyBatis Database Layer 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:/resource/sqlmap/sql-mapper-config.xml" />
@@ -20,19 +20,18 @@
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
-	
-	<!-- mybatis 3.0 버전 이후의 dao 이외의 mapper 를 이용한 매핑 -->
+	-->
+	<!-- mybatis 3.0 버전 이후의 dao 이외의 mapper 를 이용한 매핑 
 	<bean id="mapperSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:/resource/sqlmap/sql-mapper-config.xml" />
 		<property name="mapperLocations" value="classpath:/resource/sqlmap/mappers/${Globals.DbType}/*/*.xml" />
 	</bean>
-
-	<!-- MapperConfigurer setup for MyBatis Database Layer with @Mapper("deptMapper") in DeptMapper Interface -->
+	-->
+	<!-- MapperConfigurer setup for MyBatis Database Layer with @Mapper("deptMapper") in DeptMapper Interface 
  	<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
 	 	<property name="basePackage" value="com.hykRst.*" />
 	 	<property name="sqlSessionFactoryBeanName" value="mapperSqlSessionFactory" />
-<!-- 	 	* com.hykRst..impl -->
 	</bean>
-    
+    -->
 </beans>

@@ -1,4 +1,4 @@
-package com.hykRst.web.main.service.impl.impl;
+package com.hykRst.web.main.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class MainServiceImpl extends EgovAbstractServiceImpl implements MainServ
 	// 시간조회
 	@Override
 	public String getTime() throws Exception {
-		return mainDao.getTime();
+		return "";//mainDao.getTime();
 	}
 
 }

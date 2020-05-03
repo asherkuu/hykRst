@@ -21,6 +21,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MainDao {
 
+	/*
 	@Resource(name = "sqlSession")
 	private SqlSessionTemplate sqlSession;
 	
@@ -29,5 +30,6 @@ public class MainDao {
 	public String getTime() {
 		return sqlSession.selectOne(preFix + "getTime");
 	}
+	*/
 	
 }

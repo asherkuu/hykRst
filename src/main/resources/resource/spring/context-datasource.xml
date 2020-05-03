@@ -12,6 +12,7 @@
 		</property>
 	</bean>
 	
+	<!--
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${Globals.DriverClassName}" />
 		<property name="url" 
@@ -20,7 +21,7 @@
 		<property name="password" value="${Globals.Password}" />
 	</bean>
 	
-     	<!-- 
+     	 
  	
  	non sql debug print
  	

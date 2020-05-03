@@ -36,7 +36,8 @@ public class MainController {
 	public String getMainPage(Model md) throws Exception {
 
 		// 시간조회
-		String time = mainService.getTime();
+		// String time = mainService.getTime();
+		String time = "20202020";
 		md.addAttribute("time", time);
 		
 		return "web/main/index.tiles-w";
