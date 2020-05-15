@@ -3,17 +3,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%
-	// localhost:port/ or ip:port/
 	String ctxPath = request.getContextPath();
 %> 
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<script src="${ctxPath}/resources/js/web/exam/brdExam.js"></script>
 
-
-<title>Sample</title>
+<title>HYK 리조트</title>
 </head>
 <body style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">
 	        <div class="tm-main-content" id="top">
@@ -35,7 +34,7 @@
                                     <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-2">Top Destinations</a>
+                                    <a class="nav-link" id="THE_HYK">The HYK</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tm-section-3">Recommended Places</a>
