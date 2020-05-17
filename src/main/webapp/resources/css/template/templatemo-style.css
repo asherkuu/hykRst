@@ -56,6 +56,8 @@ p:last-child { margin-bottom: 0; }
 .btn-primary:hover { background: #c66995; }
 .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link { padding: 50px 35px; }
 
+/* 헤더영역 */
+
 .tm-top-bar {
     position: fixed;
     top: 0;
