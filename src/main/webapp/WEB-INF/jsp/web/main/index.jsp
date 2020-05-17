@@ -17,7 +17,10 @@
 </head>
 <body style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">
 	        <div class="tm-main-content" id="top">
-            <div class="tm-top-bar-bg"></div>    
+            <div class="tm-top-bar-bg"></div>
+            
+            <!-- 헤더영역 -->
+                
             <div class="tm-top-bar" id="tm-top-bar">
                 <div class="container">
                     <div class="row">
@@ -50,7 +53,14 @@
             </div> <!-- container -->
         </div> <!-- .tm-top-bar -->
 
+		<!-- 헤더영역 //////////////////////////////////////////////////////////// -->
+
+		<!-- 콘텐츠영역 -->
+
         <div class="tm-page-wrap mx-auto">
+        
+        	<!-- Section 1 -->
+        
             <section class="tm-banner">
                 <div class="tm-container-outer tm-banner-bg">
                     <div class="container">
@@ -144,6 +154,10 @@
                     </div>  <!-- .container -->                   
                 </div>     <!-- .tm-container-outer -->                 
             </section>
+            
+            <!-- Section 1 ////////////////////////////////////////////////////////////////// -->
+
+			<!-- Section 2 -->
 
             <section class="p-5 tm-container-outer tm-bg-gray">            
                 <div class="container">
@@ -156,6 +170,10 @@
                     </div>
                 </div>            
             </section>
+            
+            <!-- Section 2 ///////////////////////////////////////////////////// -->
+            
+            <!-- Section 3 -->
             
             <div class="tm-container-outer" id="tm-section-2">
                 <section class="tm-slideshow-section">
@@ -197,7 +215,12 @@
                         <a href="#" class="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
                     </div>
                 </section>
-            </div>        
+            </div>
+            
+            <!-- Section 3 /////////////////////////////////////////////////////////// -->
+            
+            <!-- Section 4 -->
+                    
             <div class="tm-container-outer" id="tm-section-3">
                 <ul class="nav nav-pills tm-tabs-links">
                     <li class="tm-tab-link-li">
@@ -667,6 +690,10 @@
                     </div> <!-- tab-pane -->
                 </div>
             </div>
+            
+            <!-- Section 4 //////////////////////////////////////////////////// -->
+            
+            <!-- Section 5 -->
 
             <div class="tm-container-outer tm-position-relative" id="tm-section-4">
                 <div id="google-map"></div>
@@ -686,13 +713,23 @@
                     <button type="submit" class="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Send Message Now</button>
                 </form>
             </div> <!-- .tm-container-outer -->
-
+            
+            <!-- Section 5 ///////////////////////////////////////////////////////// -->
+	
+            <!-- 푸터영역 -->
+            
             <footer class="tm-container-outer">
                 <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> Your Company 
                     
                 . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Template Mo</a></p>
             </footer>
+            
+            <!-- 푸터영역 //////////////////////////////////////////////////////////////// -->
+            
         </div>
+        
+        <!-- 콘텐츠영역 ////////////////////////////////////////////////////////////////////// -->
+        
     </div> <!-- .main-content -->
 
     
