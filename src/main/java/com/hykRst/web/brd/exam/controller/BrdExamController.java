@@ -49,7 +49,7 @@ public class BrdExamController {
 	 */
 	@RequestMapping(value = "/ex/gLt.do", method={RequestMethod.GET})
 	@ResponseBody
-	public Map<String, Object> getBrdExamList() throws Exception {
+	public String getBrdExamList() throws Exception {
 		
 		Map<String, Object> result = new HashMap<String, Object>();
 		
@@ -63,7 +63,7 @@ public class BrdExamController {
 			e.printStackTrace();
 		}
 		
-		return result;
+		return result.toString();
 	}
 
 	

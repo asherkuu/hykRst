@@ -5,15 +5,6 @@
 <%
 	String ctxPath = request.getContextPath();
 %> 
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<script src="${ctxPath}/resources/js/web/exam/brdExam.js"></script>
-
-<title>HYK 리조트</title>
-</head>
 <body style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">
 	        <div class="tm-main-content" id="top">
             <div class="tm-top-bar-bg"></div>
@@ -733,8 +724,19 @@
 
     
     <script> 
-        /* Google Maps
-        ------------------------------------------------*/
+	    cmmn.util.Request.helloWorld();
+	    app.exam.BrdExam.open();
+ 	/*
+ 	
+ 	
+ 		cmmnUtil.js 와 brdExam.js 의 함수 호출해오기
+ 		
+ 		
+ 	*/	
+    
+    	
+        // Google Maps
+    //------------------------------------------------
         var map = '';
         var center;
 
@@ -767,8 +769,8 @@
             document.body.appendChild(script);
         } 
 
-        /* DOM is ready
-        ------------------------------------------------*/
+        // DOM is ready
+        //------------------------------------------------
         $(function(){
 
             // Change top navbar on scroll
@@ -814,4 +816,3 @@
 
     </script>  
 </body>
-</html>
