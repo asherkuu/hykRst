@@ -23,7 +23,9 @@ var AppLibFiles = {
 			Core : [
 				"resources/js/common/app.js",
 				"resources/js/common/cmmnUtil.js",
-				"resources/js/web/exam/brdExam.js"
+				"resources/js/web/exam/brdExam.js",
+				
+				"resources/js/web/exam/ksk.js" 			// 김선규 테스트
 			],
 
 		},
