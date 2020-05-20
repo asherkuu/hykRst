@@ -1,9 +1,10 @@
 //
 // Version 1.0
 // 18 May 2020
+// 
+// Auther : HYK
 //
-// Usage:
-//		requestData( message, [title, callback] )
+// Usage: requestData( message, [title, callback] )
 
 
 (function() {
@@ -18,7 +19,7 @@
 			url = request url
 			param = json data
 			option = global option setting parameter
-		
+		j
 	
 		// ajax 데이터 통신
 		requestData = function(url, param, option) {
