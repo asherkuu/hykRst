@@ -19,28 +19,33 @@
 			url = request url
 			param = json data
 			option = global option setting parameter
-		j
+		*/
 	
 		// ajax 데이터 통신
-		requestData = function(url, param, option) {
+		requestData : function(url, param, options) {
 			
-			option.type = "json";
-			option.contentType = "";
+			if(param == "") {
+				param = {};
+			}
+			
+			if(options == "" ) { 
+				options = {};
+			} 
 			
 			$.ajax({
-				url : url,
-				type : option.type,
+				url  : url,
 				data : param,
-				dataType : option.dataType,
-				contentType : ajaxOption.contentType,
+				type : "POST",
 			}).done(function(result){
+				alert("SUCCESS" + result);				
 				return result;
+				
 			}.bind(this)).fail(function(result){
-				return error;
-			});return result;
+				alert("FAILE" + result.result);
+				return result;
+				
+			});
 		}, // end of requestData
-		
-		*/
 			
 		// 테스트
 		helloWorld : function(){

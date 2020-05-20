@@ -117,11 +117,18 @@
 		
 		// 버튼 이벤트 함수
 		initBtnEvent : function(){
-			
+			var _this = this;
 			$("#THE_HYK").click(function(){
-				alert("do not touch me")
+				alert("hel");
+				_this.getData();
 			});
 			
+		},
+		
+		getData : function(){
+			var _this = this;
+			var param = { "axid" : "hel"};
+			_this.getList(param);
 		},
 			
 //////////////
@@ -131,8 +138,42 @@
 //////////////
 // 데이터 호출 영역
 //////////////
-
 		
+		// 현재 DB 에 존재하는 임시 데이터 조회하기
+		getBrdExamList : function() {
+			var _this = this;
+			alert(cmmn.util.Request.requestData("/wb/br/ex/gLt.do",{},"json"));
+		},
+		
+		getList : function(param) {
+//			$.ajax({
+//				url : "/wb/br/ex/gLt.do",
+//				data:param,
+//				type : "POST",
+//			}).done(function(list){
+//				alert("SUCCESS" + list.result);				
+//				return result;
+//				
+//			}.bind(this)).fail(function(result){
+//				alert("FAILE" + result);
+//				return result;
+//				
+//			});
+			
+			$.ajax({
+				url : "/wb/br/ex/gLt.do",
+				data:param,
+				type : "POST",
+				success:function(result){
+					$.each(result, function(i, val){
+						alert(val);
+					})
+				},
+				error: function(request, status, error){
+	                alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
+	            }
+			});	
+		},
 	};
 
 	// extend

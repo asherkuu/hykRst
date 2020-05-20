@@ -4,10 +4,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.util.JSONPObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hykRst.web.brd.exam.service.BrdExamService;
@@ -47,23 +50,29 @@ public class BrdExamController {
 	 * 예시 게시판 페이지 이동
 	 * @return "web/main/index.jsp"
 	 */
-	@RequestMapping(value = "/ex/gLt.do", method={RequestMethod.GET})
+	@RequestMapping(value = "/ex/gLt.do", method={RequestMethod.POST},produces="application/json;charset=UTF-8")
 	@ResponseBody
-	public String getBrdExamList() throws Exception {
+	public String getBrdExamList(@RequestParam Map<String, Object> param) throws Exception {
+		
+		String jsonStr = "";
 		
 		Map<String, Object> result = new HashMap<String, Object>();
-		
 		try {
 			List<Map<String, Object>> list = brdExamService.getBrdexamList();
 			
-			System.out.println(list);
+			result.put("result", list);		
 			
-			result.put("result", list);
+			// 기존 Object 를 json 형식으로 변경
+			ObjectMapper mapper = new ObjectMapper();
+			jsonStr = mapper.writeValueAsString(list);
+			
+			// ObjectMapperSuppoert.objectToJson(result);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		return result.toString();
+		return jsonStr;
 	}
 
 	

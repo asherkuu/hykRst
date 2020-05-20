@@ -25,8 +25,8 @@ public class MainServiceImpl extends EgovAbstractServiceImpl implements MainServ
 
 	@Autowired
 	private MainDao mainDao;
-	
-	// 시간조회
+
+	// 시간조회 
 	@Override
 	public String getTime() throws Exception {
 		return mainDao.getTime();
