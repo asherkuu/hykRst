@@ -17,7 +17,7 @@
 	        	$("#THE_HYK").on('click', function(e){
 	        		cmmn.util.Request.loadUrl("web/exam/ksk");
 	        		alert("에라이fdadfd12312321312312321321312132132fad");
-	        		alert("아니");
+	        		alert("아니321321312");
 	        	});
 			},
 			
