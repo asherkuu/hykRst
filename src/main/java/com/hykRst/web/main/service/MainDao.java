@@ -29,5 +29,4 @@ public class MainDao {
 	public String getTime() {
 		return sqlSession.selectOne(preFix + "getTime");
 	}
-	
 }
