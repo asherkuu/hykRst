@@ -16,7 +16,7 @@
 			initiallize :function(){
 	        	$("#THE_HYK").on('click', function(e){
 	        		cmmn.util.Request.loadUrl("web/exam/ksk");
-	        		alert("에라이");
+	        		alert("에라이fdadfdfaadffad");
 	        	});
 			},
 			
