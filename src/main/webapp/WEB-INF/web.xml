@@ -72,5 +72,14 @@
 		<error-code>500</error-code>
 		<location>/common/500error.jsp</location>
 	</error-page>
+	
+    <!--
+     <filter-mapping>  
+	    <filter-name>UrlRewriteFilter</filter-name> 
+	    <url-pattern>/</url-pattern> 
+	    <dispatcher>REQUEST</dispatcher> 
+	    <dispatcher>FORWARD</dispatcher> 
+    </filter-mapping>
+	-->
     
 </web-app>
