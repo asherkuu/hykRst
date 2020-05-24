@@ -25,7 +25,8 @@ var AppLibFiles = {
 				"resources/js/common/cmmnUtil.js",
 				"resources/js/web/exam/brdExam.js",
 				
-				"resources/js/web/exam/ksk.js" 			// 김선규 테스트
+				"resources/js/web/exam/ksk.js", 			// 김선규 테스트
+				"resources/js/web/exam/lcy.js" 			// 이채연 테스트
 			],
 
 		},
