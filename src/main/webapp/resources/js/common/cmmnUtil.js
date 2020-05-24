@@ -48,17 +48,23 @@
 			
 		}, // end of requestData
 		
-		// jsp 화면 호출
+		/**
+		 * Version : 1.0
+		 * function: loadUrl
+		 * Usage   : cmmn.util.Request.loadUrl(url);
+		 * Author  : HYK
+		 * Comment : 각 controller 에서 단순 화면 요청만을 할때 사용되어지는 함수
+		 * 			 [아직 미완성인 함수] 화면 연결은 잘 되나 
+		 * 			 url 형식이 데이터 호출 url과 다르다는 점이 있어서 사용여부는 일단 보류인 상태
+		 * 
+		 * 			 일반적인 각 controller 호출 url > localhost:8080/wb/ksk/ex/ksk.do
+		 * 			 공통함수 사용 url > localhost:8080/load?page=d2ViL2V4YW0va3Nr
+		 */
 		loadUrl : function(url){
-			var path = "load?page="+btoa(url);
-			location.href = path;
 			
-			_self.hidestatus();
-		},
-		
-		hidestatus :function (){
-			window.status=''
-			return true
+			// btoa 는 base64 형식의 문자열로 인코딩 해주는 스크립트 기본제공 함수이다.
+			var path = "load?page="+btoa(url);
+			location.href = path;			
 		},
 
 		helloWorld : function(){

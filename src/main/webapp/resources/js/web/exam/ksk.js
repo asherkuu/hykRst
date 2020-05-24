@@ -15,9 +15,12 @@
 			
 			initiallize :function(){
 	        	$("#THE_HYK").on('click', function(e){
+	        		/*
+	        			공통함수 - 단순 화면 조회
+	        			cmmnUtil.js loadUrl : function() 함수 확인바람
+	        			
+	        		*/
 	        		cmmn.util.Request.loadUrl("web/exam/ksk");
-	        		alert("에라이fdadfd12312321312312321321312132132fad");
-	        		alert("아니321321312");
 	        	});
 			},
 			
