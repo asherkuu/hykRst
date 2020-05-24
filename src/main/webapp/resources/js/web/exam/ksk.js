@@ -2,6 +2,8 @@
 	
 	"use strict";
 	
+	
+	
 	var _class = {
 			
 			open : function(){
@@ -12,11 +14,11 @@
 			},
 			
 			initiallize :function(){
-				alert("김선규");
-				
-				$("#THE_HYK").onclick(function(){
-					
-				});
+	        	$("#THE_HYK").on('click', function(e){
+	        		cmmn.util.Request.loadUrl("web/exam/ksk");
+	        	});
+
+
 			},
 			
 	};

@@ -28,7 +28,7 @@
                                     <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="THE_HYK">The HYK</a>
+                                    <a class="nav-link" id="THE_HYK" onclick="app.ksk.BrdTest.open();">The HYK</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#tm-section-3">Recommended Places</a>
@@ -724,15 +724,6 @@
 
     
     <script> 
-	    cmmn.util.Request.helloWorld();
-	    app.exam.BrdExam.open();
- 	/*
- 	
- 	
- 		cmmnUtil.js 와 brdExam.js 의 함수 호출해오기
- 		
- 		
- 	*/	
     
     	
         // Google Maps
@@ -772,6 +763,7 @@
         // DOM is ready
         //------------------------------------------------
         $(function(){
+        	
 
             // Change top navbar on scroll
             $(window).on("scroll", function() {

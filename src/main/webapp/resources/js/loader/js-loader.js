@@ -13,12 +13,20 @@
 	var jsPath = getScriptLocation("js-loader.js");
 	var files;
 	
+	var protocol 	= location.protocol; // http
+	var hostName 	= location.hostname; // localhost
+	var port 		= location.port;	 // 8080
+	
+	// http//localhost:8080/
+	var urlPath = protocol + "//" + hostName + ":" + port + "/"; 
+	
+	
 	// css include
 	files = AppLibFiles.CSS;
 	for(var key in files) {
 		var srcs = files[key];
 		for(var idx = 0; idx < srcs.length; idx++) {
-			document.write("<link rel='stylesheet' type='text/css' href='" + /* jsPath + */ srcs[idx] + "'>");
+			document.write("<link rel='stylesheet' type='text/css' href='" + urlPath + srcs[idx] + "'>");
 		}
 	}
 	
@@ -27,7 +35,7 @@
 	for(var key in files) {
 		var srcs = files[key];
 		for(var idx = 0; idx < srcs.length; idx++) {
-			document.write("<script src='" + srcs[idx] + "'></script>");
+			document.write("<script src='" + urlPath + srcs[idx] + "'></script>");
 		}
 	} 	
 	

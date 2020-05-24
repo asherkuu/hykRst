@@ -4,7 +4,7 @@
 // 
 // Auther : HYK
 //
-// Usage: requestData( message, [title, callback] )
+// Usage: requestData( url, param, options )
 
 
 (function() {
@@ -45,9 +45,22 @@
 				return result;
 				
 			});
-		}, // end of requestData
 			
-		// 테스트
+		}, // end of requestData
+		
+		// jsp 화면 호출
+		loadUrl : function(url){
+			var path = "load?page="+btoa(url);
+			location.href = path;
+			
+			_self.hidestatus();
+		},
+		
+		hidestatus :function (){
+			window.status=''
+			return true
+		},
+
 		helloWorld : function(){
 			alert("helloWorld Welcome!");
 		}, 

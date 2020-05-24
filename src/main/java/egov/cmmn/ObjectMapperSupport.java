@@ -26,7 +26,6 @@ import org.slf4j.LoggerFactory;
  */
 public class ObjectMapperSupport {
 
-	
 	private static final Logger logger = LoggerFactory.getLogger(ObjectMapperSupport.class);
 	
 	/**

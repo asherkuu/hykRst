@@ -165,9 +165,11 @@
 				data:param,
 				type : "POST",
 				success:function(result){
+					/*
 					$.each(result, function(i, val){
 						alert(val);
 					})
+					*/
 				},
 				error: function(request, status, error){
 	                alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
