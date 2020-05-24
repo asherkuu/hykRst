@@ -18,3 +18,4 @@ public interface MainService {
 	String getTime() throws Exception;
 	
 }
+ 
