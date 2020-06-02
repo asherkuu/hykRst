@@ -24,6 +24,8 @@
 		// ajax 데이터 통신
 		requestData : function(url, param, options) {
 			
+			var deferred = $.Deferred();
+			
 			if(param == "") {
 				param = {};
 			}
@@ -36,15 +38,18 @@
 				url  : url,
 				data : param,
 				type : "POST",
+				dataType:"JSON",
 			}).done(function(result){
-				alert("SUCCESS" + result);				
-				return result;
 				
+				$('#content').children().remove();
+				$('#content').html(result);
+				
+				deferred.resolve(result);
 			}.bind(this)).fail(function(result){
-				alert("FAILE" + result.result);
-				return result;
-				
+				deferred.resolve(result);
 			});
+			
+			return deferred.promise();
 			
 		}, // end of requestData
 		
@@ -60,17 +65,31 @@
 		 * 			 일반적인 각 controller 호출 url > localhost:8080/wb/ksk/ex/ksk.do
 		 * 			 공통함수 사용 url > localhost:8080/load?page=d2ViL2V4YW0va3Nr
 		 */
-		loadUrl : function(url){
-			
+		loadUrl : function(urlType, jspPath){
+			var deferred = $.Deferred();
 			// btoa 는 base64 형식의 문자열로 인코딩 해주는 스크립트 기본제공 함수이다.
-			var path = "load?page="+btoa(url);
-			location.href = path;			
-		},
-
-		helloWorld : function(){
-			alert("helloWorld Welcome!");
-		}, 
 			
+			var path = "/hyk/"+urlType+"/?se=" + btoa(jspPath);
+			location.href = path;
+
+			deferred.resolve();
+			
+			return deferred.promise();
+		},
+		
+		loadUrl : function(urlType, jspPath){
+			var deferred = $.Deferred();
+			// btoa 는 base64 형식의 문자열로 인코딩 해주는 스크립트 기본제공 함수이다.
+			
+			var path = "/hyk/"+urlType+"/?se=" + btoa(jspPath);
+			location.href = path;
+
+			
+			
+			deferred.resolve();
+			
+			return deferred.promise();
+		},
 		
 	} // end of _util
 

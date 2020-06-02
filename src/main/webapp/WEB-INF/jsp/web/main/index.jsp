@@ -2,55 +2,14 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%
-	String ctxPath = request.getContextPath();
-%> 
-<body style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">
-	        <div class="tm-main-content" id="top">
-            <div class="tm-top-bar-bg"></div>
-            
-            <!-- 헤더영역 --> 
-                
-            <div class="tm-top-bar" id="tm-top-bar">
-                <div class="container">
-                    <div class="row">
-                        <nav class="navbar navbar-expand-lg narbar-light">
-                            <a class="navbar-brand mr-auto" href="#">
-                                <img src="${ctxPath}/resources/img/logo.png" alt="Site logo">
-                                Journey
-                            </a>
-                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                                <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="THE_HYK" onclick="app.ksk.BrdTest.open();">The HYK</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-3">Recommended Places</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-4">Contact Us</a>
-                                </li>
-                            </ul >
-                        </div>                            
-                    </nav>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- .tm-top-bar -->
 
-		<!-- 헤더영역 //////////////////////////////////////////////////////////// -->
+<!-- 콘텐츠영역 -->
 
-		<!-- 콘텐츠영역 -->
-
-        <div class="tm-page-wrap mx-auto">
+<div style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">		
+        <div class="tm-page-wrap mx-auto">        
         
-        	<!-- Section 1 -->
-        
+       	<!-- Section 1 -->
+       	
             <section class="tm-banner">
                 <div class="tm-container-outer tm-banner-bg">
                     <div class="container">
@@ -145,9 +104,9 @@
                 </div>     <!-- .tm-container-outer -->                 
             </section>
             
-            <!-- Section 1 ////////////////////////////////////////////////////////////////// -->
+		<!-- Section 1 ////////////////////////////////////////////////////////////////// -->
 
-			<!-- Section 2 -->
+		<!-- Section 2 -->
 
             <section class="p-5 tm-container-outer tm-bg-gray">            
                 <div class="container">
@@ -161,9 +120,9 @@
                 </div>            
             </section>
             
-            <!-- Section 2 ///////////////////////////////////////////////////// -->
-            
-            <!-- Section 3 -->
+		<!-- Section 2 ////////////////////////////////////////////////////////////////// -->
+		
+		<!-- Section 3 -->
             
             <div class="tm-container-outer" id="tm-section-2">
                 <section class="tm-slideshow-section">
@@ -207,55 +166,12 @@
                 </section>
             </div>
             
-            <!-- Section 3 /////////////////////////////////////////////////////////// -->
+            <!-- Section 3 ////////////////////////////////////////////////////////////////// -->
             
             <!-- Section 4 -->
                     
             <div class="tm-container-outer" id="tm-section-3">
-                <ul class="nav nav-pills tm-tabs-links">
-                    <li class="tm-tab-link-li">
-                        <a href="#1a" data-toggle="tab" class="tm-tab-link">
-                            <img src="${ctxPath}/resources/img/north-america.png" alt="Image" class="img-fluid">
-                            North America
-                        </a>
-                    </li>
-                    <li class="tm-tab-link-li">
-                        <a href="#2a" data-toggle="tab" class="tm-tab-link">
-                            <img src="${ctxPath}/resources/img/south-america.png" alt="Image" class="img-fluid">
-                            South America
-                        </a>
-                    </li>
-                    <li class="tm-tab-link-li">
-                        <a href="#3a" data-toggle="tab" class="tm-tab-link">
-                            <img src="${ctxPath}/resources/img/europe.png" alt="Image" class="img-fluid">
-                            Europe
-                        </a>
-                    </li>
-                    <li class="tm-tab-link-li">
-                        <a href="#4a" data-toggle="tab" class="tm-tab-link active"><!-- Current Active Tab -->
-                            <img src="${ctxPath}/resources/img/asia.png" alt="Image" class="img-fluid">
-                            Asia
-                        </a>
-                    </li>
-                    <li class="tm-tab-link-li">
-                        <a href="#5a" data-toggle="tab" class="tm-tab-link">
-                            <img src="${ctxPath}/resources/img/africa.png" alt="Image" class="img-fluid">
-                            Africa
-                        </a>
-                    </li>
-                    <li class="tm-tab-link-li">
-                        <a href="#6a" data-toggle="tab" class="tm-tab-link">
-                            <img src="${ctxPath}/resources/img/australia.png" alt="Image" class="img-fluid">
-                            Australia
-                        </a>
-                    </li>
-                    <li class="tm-tab-link-li">
-                        <a href="#7a" data-toggle="tab" class="tm-tab-link">
-                            <img src="${ctxPath}/resources/img/antartica.png" alt="Image" class="img-fluid">
-                            Antartica
-                        </a>
-                    </li>
-                </ul>
+                
                 <div class="tab-content clearfix">
                 	
                     <!-- Tab 1 -->
@@ -681,85 +597,15 @@
                 </div>
             </div>
             
-            <!-- Section 4 //////////////////////////////////////////////////// -->
-            
-            <!-- Section 5 -->
-
-            <div class="tm-container-outer tm-position-relative" id="tm-section-4">
-                <div id="google-map"></div>
-                <form action="index.html" method="post" class="tm-contact-form">
-                    <div class="form-group tm-name-container">
-                        <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
-                    </div>
-                    <div class="form-group tm-email-container">
-                        <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject"  required/>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Send Message Now</button>
-                </form>
-            </div> <!-- .tm-container-outer -->
-            
-            <!-- Section 5 ///////////////////////////////////////////////////////// -->
-	
-            <!-- 푸터영역 -->
-            
-            <footer class="tm-container-outer">
-                <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> Your Company 
-                    
-                . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Template Mo</a></p>
-            </footer>
-            
-            <!-- 푸터영역 //////////////////////////////////////////////////////////////// -->
-            
-        </div>
+            <!-- Section 4 ////////////////////////////////////////////////////////////////// -->
+        </body>
         
         <!-- 콘텐츠영역 ////////////////////////////////////////////////////////////////////// -->
         
     </div> <!-- .main-content -->
-
+</div>
     
     <script> 
-    
-    	
-        // Google Maps
-    //------------------------------------------------
-        var map = '';
-        var center;
-
-        function initialize() {
-            var mapOptions = {
-                zoom: 16,
-                center: new google.maps.LatLng(37.769725, -122.462154),
-                scrollwheel: false
-            };
-
-            map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
-
-            google.maps.event.addDomListener(map, 'idle', function() {
-              calculateCenter();
-          });
-
-            google.maps.event.addDomListener(window, 'resize', function() {
-              map.setCenter(center);
-          });
-        }
-
-        function calculateCenter() {
-            center = map.getCenter();
-        }
-
-        function loadGoogleMap(){
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
-            document.body.appendChild(script);
-        } 
-
         // DOM is ready
         //------------------------------------------------
         $(function(){
@@ -800,11 +646,7 @@
                 arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1
-            });
-
-            loadGoogleMap();                                       // Google Map                
-            $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+            });           
         });
 
     </script>  
-</body>

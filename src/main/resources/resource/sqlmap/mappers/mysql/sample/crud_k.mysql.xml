@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.crud_k">
+	
+	<select id="selectCrud_kList" parameterType="Map" resultType="egovMap">
+		SELECT
+			   A.HYK_SEQ	 
+			 , A.HYK_TITLE
+			 , A.HYK_CONTENT
+			 , A.HYK_REG_USR
+			 , A.HYK_REG_DAT
+			 , A.HYK_REG_TME   
+		  FROM HYK_BRD_TBL A
+	</select>
+
+</mapper>

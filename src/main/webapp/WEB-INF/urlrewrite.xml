@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<!--  
+<urlrewrite>
+	<rule>
+		<note> /load/ 로 요청이 들어오면 /rewrite-status 로 리다이렉트 됩니다. </note>
+		<from>/test/status/</from>
+		<to type="redirect">%{context-path}/rewrite-status</to>
+	</rule>
+	<outbound-rule>
+		<note> 
+			아웃바운드 룰은 response.encodeURL 또는 JSTL 의 c:url 이 사용될때
+			/rewrite-status 를 /test/status 로 변경합니다. </note>
+		<from>/rewrite-status</from>
+		<to>/load/</to>
+	</outbound-rule>
+</urlrewrite>
+-->

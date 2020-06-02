@@ -1,0 +1,268 @@
+.limiter {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-table100 {
+	width: 100%;
+	/*   min-height: 100vh; */
+	/*   background: #c4d3f6; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 100px 30px;
+}
+
+.wrap-table100 {
+	width: 960px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.table {
+	width: 100%;
+	display: table;
+	margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.table {
+		display: block;
+	}
+}
+
+.row {
+	display: table-row;
+	background: #fff;
+}
+
+.row.header {
+	color: #ffffff;
+	background: #6c7ae0;
+}
+
+@media screen and (max-width: 768px) {
+	.row {
+		display: block;
+	}
+	.row.header {
+		padding: 0;
+		height: 0px;
+	}
+	.row.header .cell {
+		display: none;
+	}
+	.row .cell:before {
+		font-family: Poppins-Bold;
+		font-size: 12px;
+		color: #808080;
+		line-height: 1.2;
+		text-transform: uppercase;
+		font-weight: unset !important;
+		margin-bottom: 13px;
+		content: attr(data-title);
+		min-width: 98px;
+		display: block;
+	}
+}
+
+.cell {
+	display: table-cell;
+}
+
+@media screen and (max-width: 768px) {
+	.cell {
+		display: block;
+	}
+}
+
+.row .cell {
+	font-family: Poppins-Regular;
+	font-size: 15px;
+	color: #666666;
+	line-height: 1.2;
+	font-weight: unset !important;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f2f2f2;
+	text-align: center;
+}
+
+.row.header .cell {
+	font-family: Poppins-Regular;
+	font-size: 18px;
+	color: #fff;
+	line-height: 1.2;
+	font-weight: unset !important;
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+
+.row .cell:nth-child(1) {
+	width: 110px;
+}
+
+.row .cell:nth-child(2) {
+	width: 610px;
+	text-align: left;
+}
+
+.row .cell:nth-child(3) {
+	width: 100px;
+}
+
+.row .cell:nth-child(4) {
+	width: 100px;
+}
+
+.row .cell:nth-child(5) {
+	width: 100px;
+}
+
+.table, .row {
+	width: 100% !important;
+}
+
+.row.content {
+	border-bottom: 1px #d7d7fa solid;
+}
+
+.row.content:hover {
+	background-color: #d7d7fa;
+	cursor: pointer;
+}
+
+@media ( max-width : 768px) {
+	.row {
+		border-bottom: 1px solid #f2f2f2;
+		padding-bottom: 18px;
+		padding-top: 30px;
+		padding-right: 15px;
+		margin: 0;
+	}
+	.row .cell {
+		border: none;
+		padding-left: 30px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	.row .cell:nth-child(1) {
+		padding-left: 30px;
+	}
+	.row .cell {
+		font-family: Poppins-Regular;
+		font-size: 18px;
+		color: #555555;
+		line-height: 1.2;
+		font-weight: unset !important;
+	}
+	.table, .row, .cell {
+		width: 100% !important;
+	}
+}
+
+/*=========================================================*/
+
+
+.btn-container {
+	margin-bottom : 20px;
+}
+
+.icon-btn {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #6c7ae0;
+	background: white;
+	border-radius: 25px;
+	overflow: hidden;
+	position: relative;
+	transition: width 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.add-btn:hover {
+	width: 120px;
+}
+
+.add-btn::before, .add-btn::after {
+	transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+	content: "";
+	position: absolute;
+	height: 4px;
+	width: 10px;
+	top: calc(50% - 2px);
+	background: #6c7ae0;
+}
+
+.add-btn::after {
+	right: 14px;
+	overflow: hidden;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+	left: 14px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+	outline: none;
+}
+
+.btn-txt {
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+.add-btn:hover::before, .add-btn:hover::after {
+	width: 4px;
+	border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+	opacity: 1;
+}
+
+.add-icon::after, .add-icon::before {
+	transition: all 0.2s ease-in-out;
+	content: "";
+	position: absolute;
+	height: 20px;
+	width: 2px;
+	top: calc(50% - 10px);
+	background: #6c7ae0;
+	overflow: hidden;
+}
+
+.add-icon::before {
+	left: 22px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+	right: 22px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+	left: 15px;
+	height: 4px;
+	top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+	right: 15px;
+	height: 4px;
+	top: calc(50% - 2px);
+}
+
+/*=====================================*/

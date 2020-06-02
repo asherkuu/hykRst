@@ -27,8 +27,7 @@ import egov.cmmn.ObjectMapperSupport;
  *
  * @author HYK
  * @since 2020.05.12
- *
- */
+ * */
 
 @Controller
 @RequestMapping(value = "/wb/br")
@@ -70,5 +69,12 @@ public class BrdExamController {
 		return ObjectMapperSupport.objectToJson(result);
 	}
 
-	
+	public static int safeOverflow(int number) {
+		if(number > 0) {
+			if(number > (Integer.MAX_VALUE - number)) {
+				throw new ArithmeticException("throw Overflow Exception");
+			}
+		}
+		return number;
+	}
 }

@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Sample</title>
-</head>
-<body style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">
-	<h1>WEB FOOTER</h1>
+	pageEncoding="UTF-8"%>
 </body>
+<footer class="tm-container-outer">
+	<p class="mb-0">
+		Copyright © <span class="tm-current-year">2020</span> 
+		Directed by HYK Resort
+	</p>
+</footer>
 </html>
