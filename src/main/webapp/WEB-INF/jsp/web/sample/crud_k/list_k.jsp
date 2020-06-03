@@ -17,11 +17,9 @@
 				</button>
 			</div>
 
-
-
 			<div class="wrap-table100">
 				<div class="table">
-					<div class="row header">
+					<div class="table-row header">
 						<div class="cell">No</div>
 						<div class="cell">Title</div>
 						<div class="cell">Hits</div>
@@ -30,7 +28,7 @@
 					</div>
 
 					<c:forEach var="list" items="${list}" varStatus="status">
-						<div class="row content">
+						<div class="table-row content">
 							<div class="cell" data-title="No">${list.hykSeq }</div>
 							<div class="cell title" data-title="Title">${list.hykTitle}</div>
 							<div class="cell" data-title="Hits">32</div>

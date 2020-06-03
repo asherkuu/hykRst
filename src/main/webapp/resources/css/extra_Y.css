@@ -1,3 +1,8 @@
+/*
+============================================================================================================
+====	table
+============================================================================================================
+*/
 .limiter {
 	width: 100%;
 	margin: 0 auto;
@@ -36,28 +41,28 @@
 	}
 }
 
-.row {
+.table-row {
 	display: table-row;
 	background: #fff;
 }
 
-.row.header {
+.table-row.header {
 	color: #ffffff;
 	background: #6c7ae0;
 }
 
 @media screen and (max-width: 768px) {
-	.row {
+	.table-row {
 		display: block;
 	}
-	.row.header {
+	.table-row.header {
 		padding: 0;
 		height: 0px;
 	}
-	.row.header .cell {
+	.table-row.header .cell {
 		display: none;
 	}
-	.row .cell:before {
+	.table-row .cell:before {
 		font-family: Poppins-Bold;
 		font-size: 12px;
 		color: #808080;
@@ -81,7 +86,7 @@
 	}
 }
 
-.row .cell {
+.table-row .cell {
 	font-family: Poppins-Regular;
 	font-size: 15px;
 	color: #666666;
@@ -93,7 +98,7 @@
 	text-align: center;
 }
 
-.row.header .cell {
+.table-row.header .cell {
 	font-family: Poppins-Regular;
 	font-size: 18px;
 	color: #fff;
@@ -103,77 +108,83 @@
 	padding-bottom: 19px;
 }
 
-.row .cell:nth-child(1) {
+.table-row .cell:nth-child(1) {
 	width: 110px;
 }
 
-.row .cell:nth-child(2) {
+.table-row .cell:nth-child(2) {
 	width: 610px;
 	text-align: left;
 }
 
-.row .cell:nth-child(3) {
+.table-row .cell:nth-child(3) {
 	width: 100px;
 }
 
-.row .cell:nth-child(4) {
+.table-row .cell:nth-child(4) {
 	width: 100px;
 }
 
-.row .cell:nth-child(5) {
+.table-row .cell:nth-child(5) {
 	width: 100px;
 }
 
-.table, .row {
+.table, .table-row {
 	width: 100% !important;
 }
 
-.row.content {
+.table-row.content {
 	border-bottom: 1px #d7d7fa solid;
 }
 
-.row.content:hover {
+.table-row.content:hover {
 	background-color: #d7d7fa;
 	cursor: pointer;
 }
 
 @media ( max-width : 768px) {
-	.row {
+	.table-row {
 		border-bottom: 1px solid #f2f2f2;
 		padding-bottom: 18px;
 		padding-top: 30px;
 		padding-right: 15px;
 		margin: 0;
 	}
-	.row .cell {
+	.table-row .cell {
 		border: none;
 		padding-left: 30px;
 		padding-top: 16px;
 		padding-bottom: 16px;
 	}
-	.row .cell:nth-child(1) {
+	.table-row .cell:nth-child(1) {
 		padding-left: 30px;
 	}
-	.row .cell {
+	.table-row .cell {
 		font-family: Poppins-Regular;
 		font-size: 18px;
 		color: #555555;
 		line-height: 1.2;
 		font-weight: unset !important;
 	}
-	.table, .row, .cell {
+	.table, .table-row, .cell {
 		width: 100% !important;
 	}
 }
 
-/*=========================================================*/
+/*
+============================================================================================================
+====	table end
+============================================================================================================
+*/
 
-
-.btn-container {
-	margin-bottom : 20px;
-}
-
+/*
+============================================================================================================
+====	plus button
+============================================================================================================
+*/
 .icon-btn {
+	margin-bottom: 20px;
+	float: right;
 	width: 50px;
 	height: 50px;
 	border: 1px solid #6c7ae0;
@@ -265,4 +276,141 @@
 	top: calc(50% - 2px);
 }
 
-/*=====================================*/
+/*
+============================================================================================================
+====	plus button
+============================================================================================================
+*/
+
+/*
+============================================================================================================
+====	ins form
+============================================================================================================
+*/
+.form-row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 30px -10px 30px -10px;
+}
+
+.col-md-55, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2,
+	.col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3,
+	.col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5,
+	.col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6,
+	.col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8,
+	.col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9,
+	.col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11,
+	.col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12,
+	.col-lg-12 {
+	position: relative;
+	min-height: 1px;
+	float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.x_panel {
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px 17px;
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #E6E9ED;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	opacity: 1;
+	transition: all .2s ease;
+}
+
+.x_title {
+	border-bottom: 2px solid #E6E9ED;
+	padding: 1px 5px 6px;
+	margin-bottom: 10px;
+}
+
+.x_content {
+	padding: 0 3px 6px;
+	position: relative;
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 5px;
+}
+
+span.section {
+	padding-left: 37px;
+	padding-bottom: 20px;
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 20px;
+	font-size: 21px;
+	line-height: inherit;
+	color: #333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+}
+
+.form-horizontal {
+	width: 50%;
+	margin: auto;
+}
+
+.form-horizontal .form-group {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.item {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: .5rem;
+}
+
+.label-align {
+	text-align: right;
+}
+
+.col-form-label {
+	padding-top: calc(.375rem + 1px);
+	padding-bottom: calc(.375rem + 1px);
+	margin-bottom: 0;
+	font-size: inherit;
+	line-height: 1.5;
+	color: #6c7ae0;
+}
+
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.div_box {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: #f00;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -50px; /*margin:auto를 이용해도 동일*/
+}

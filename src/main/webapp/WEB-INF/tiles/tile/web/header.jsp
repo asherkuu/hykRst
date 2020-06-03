@@ -46,7 +46,7 @@
 								<a class="nav-link" id="CSC" onclick="app.csc.csc.open();">고객센터</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" id="EXAM" href="" onclick="location.href='/sample/crud_k/outline/'">샘플</a>
+								<a class="nav-link" id="EXAM" onclick="javascript:location.href='/sample/crud_k/outline/'">샘플</a>
 							</li>
 						</ul>
 					</div>

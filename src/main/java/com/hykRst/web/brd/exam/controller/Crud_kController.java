@@ -43,6 +43,15 @@ public class Crud_kController {
 	}	
 	
 	/**
+	 * 아웃라인 목록 조회
+	 * @return 
+	 */
+	@RequestMapping(value = "/ins/")
+	public String loadins() throws Exception {
+		return "web/sample/crud_k/ins_k.tiles-w";
+	}
+	
+	/**
 	 * 게시판샘플 목록 조회
 	 * @return 
 	 */
