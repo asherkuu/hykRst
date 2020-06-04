@@ -38,4 +38,13 @@ public class Crud_kServiceImpl extends EgovAbstractServiceImpl implements Crud_k
 		return crud_kDao.getCrud_kList();
 	}
 
+	/**
+	 * 게시판샘플 등록
+	 * @return 
+	 */
+	@Override
+	public int postCrud_kIns(Map<String, Object> param) throws Exception {
+		return crud_kDao.postCrud_kIns(param);
+	}
+
 }

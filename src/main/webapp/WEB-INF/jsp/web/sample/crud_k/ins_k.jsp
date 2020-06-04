@@ -12,74 +12,53 @@
 			</div>
 			<div class="x_content" style="display: block;">
 			
-				<form class="form-horizontal form-label-left">
+				<form name="frm_crud_k" class="form-horizontal form-label-left">
 
 					<span class="section">Throw your worries away !</span>
 					
 					<!-- Name -->
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="HYK_REG_USR">
 							Name <span class="required">*</span>
 						</label>
 						<div class="col-md-6 col-sm-6">
-							<input type="text" id="name" name="name" class="form-control" data-validate-length-range="6" 
+							<input type="text" id="HYK_REG_USR" name="HYK_REG_USR" class="form-control" data-validate-length-range="6" 
 								data-validate-words="2" placeholder="both name(s) e.g Jon Doe" required="required">
-						</div>
-					</div>
-					
-					<!-- Email -->
-					<div class="item form-group bad">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="email">
-							Email <span class="required">*</span>
-						</label>
-						<div class="col-md-6 col-sm-6">
-							<input type="email" id="email" name="email" class="form-control" required="required">
-						</div>
-						<div class="alert"></div>
-					</div>	
-								
-					<!-- Mobile -->	
-					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="mobile">
-							Mobile &nbsp;
-						</label>
-						<div class="col-md-6 col-sm-6">
-							<input type="text" id="mobile" name="mobile" class="form-control" data-validate-minmax="10,100">
 						</div>
 					</div>
 					
 					<!-- Title -->
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="HYK_TITLE">
 							Title <span class="required">*</span>
 						</label>
 						<div class="col-md-6 col-sm-6">
-							<input type="text" id="name" name="name" class="form-control" data-validate-length-range="6" 
+							<input type="text" id="HYK_TITLE" name="HYK_TITLE" class="form-control" data-validate-length-range="6" 
 								data-validate-words="2" required="required">
 						</div>
 					</div>
 					
 					<!-- Textarea -->
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="textarea">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="HYK_CONTENT">
 							Textarea <span class="required">*</span>
 						</label>
 						<div class="col-md-6 col-sm-6">
-							<textarea id="textarea" name="textarea" class="form-control" cols="3" rows="5" required="required" ></textarea>
+							<textarea id="HYK_CONTENT" name="HYK_CONTENT" class="form-control" cols="3" rows="5" required="required" ></textarea>
 						</div>
 					</div>
 					
 					<!-- Password -->
-					<div class="item form-group bad">
-						<label for="password" class="col-form-label col-md-3 label-align">
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="HYK_BRD_PWD">
 							Password <span class="required">*</span>
 						</label>
 						<div class="col-md-6 col-sm-6">
-							<input type="password" id="password" name="password" class="form-control" data-validate-length="6,8"  required="required">
+							<input type="password" id="HYK_BRD_PWD" name="HYK_BRD_PWD" class="form-control" data-validate-length-range="6" 
+								data-validate-words="2" required="required">
 						</div>
-						<div class="alert"></div>
 					</div>
-					
+
 					<!-- Button Area -->
 					<div class="ln_solid"></div>
 					<div class="form-group">

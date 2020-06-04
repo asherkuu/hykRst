@@ -23,4 +23,10 @@ public interface Crud_kService {
 	 */
 	List<Map<String, Object>> getCrud_kList() throws Exception;
 
+	/**
+	 * 게시판샘플 등록
+	 * @return 
+	 */
+	int postCrud_kIns(Map<String, Object> param) throws Exception;
+
 }

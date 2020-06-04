@@ -34,6 +34,11 @@ public class Crud_kDao {
 		return sqlSession.selectList(preFix + "selectCrud_kList");
 	}
 
+	// 등록
+	public int postCrud_kIns(Map<String, Object> param) {
+		return sqlSession.insert(preFix + "postCrud_kIns", param);
+	}
+
 	
 	
 }

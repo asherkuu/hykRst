@@ -12,6 +12,7 @@
 		</property>
 	</bean>
 	
+	<!-- 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${Globals.DriverClassName}" />
 		<property name="url" 
@@ -20,24 +21,25 @@
 		<property name="username" value="${Globals.UserName}" />
 		<property name="password" value="${Globals.Password}" />
 	</bean>
-	
+	 -->
  	<!-- non sql debug print
  	
  	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${Globals.DriverClassName}" />
-		<property name="url" value="${Globals.UrlType}://${Globals.UrlIp}:${Globals.UrlPort}/${Globals.UrlDbName}?${Globals.UrlSet}" />
+		<property name="url" value="${Globals.UrlType}://${Globals.UrlIp}:${Globals.UrlPort}/${Globals.UrlDbName}?serverTimezone=UTC&amp;useSSL=false&amp;autoReconnection=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false" />
 		<property name="username" value="${Globals.UserName}" />
 		<property name="password" value="${Globals.Password}" />
 	</bean>
 	
 	sql debug print
+	-->
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${Globals.DriverClassName}" />
-		<property name="url" value="${Globals.UrlType}://${Globals.UrlIp}:${Globals.UrlPort}/${Globals.UrlDbName}?${Globals.UrlSet}" />
+		<property name="url" value="${Globals.UrlType}://${Globals.UrlIp}:${Globals.UrlPort}/${Globals.UrlDbName}?serverTimezone=UTC&amp;useSSL=false&amp;autoReconnection=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false" />
 		<property name="username" value="${Globals.UserName}" />
 		<property name="password" value="${Globals.Password}" />
 	</bean>
 	
- 	 -->
+ 	
 </beans>

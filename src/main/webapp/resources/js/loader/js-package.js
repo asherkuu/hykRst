@@ -34,6 +34,8 @@ var AppLibFiles = {
 				"resources/js/web/main/main.js",			// 메인
 				
 				// 샘플 - exam
+				"resources/js/web/sample/outline.js", 		// 게시판 공통 테스트
+				
 				"resources/js/web/sample/ksk.js", 			// 김선규 테스트
 				// "resources/js/web/exam/lcy.js",				// 이채연 테스트
 				"resources/js/web/sample/brdExam.js",			// 테스트

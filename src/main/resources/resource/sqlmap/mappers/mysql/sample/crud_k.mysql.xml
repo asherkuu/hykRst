@@ -12,5 +12,55 @@
 			 , A.HYK_REG_TME   
 		  FROM HYK_BRD_TBL A
 	</select>
+	
+	<insert id="postCrud_kIns" parameterType="Map"> 
+		<selectKey keyProperty="HYK_SEQ" resultType="String" order="BEFORE">
+			SELECT IFNULL(MAX(HYK_SEQ) ,0) + 1 AS HYK_SEQ
+			  FROM HYK_BRD_TBL
+		</selectKey>	
+				  
+		  <!-- 
+		  	IFNULL()함수는   IFNULL(변수명, 0) 이렇게 사용하며
+		  	만약 번수명이 NULL 이 아니라면 변수명의 값을 사용하고
+		  	만약 변수명이 NULL 이라면 0이라는 값을 사용해라라 는 의미이다.   
+		  	
+		  	오라클에는 NVL() 과 NVL2() 가 있다.
+		  	
+		  	mybatis의 <selectKey> 해당 쿼리문이 실행되기 전 또는 후에 실행하는 특정한 데이터값을 넘겨주는 태그이다.
+		  	해당 데이터를 불러오고 keyProperty로 key값을 저장하면 해당 key 값으로 데이터를 사용할 수 있다.
+		  	
+		  	위의 keyProperty="HYK_SEQ" 는 아래의 INSERT 문의 첫번째 HYK_SEQ 에 사용된다. > #{HYK_SEQ}
+		  	
+		  	INSERT 문의 문법은 INSERT INTO TABLE_NAME () VALUES ();
+		  	이렇게 되는데 첫번째 () 의 컬럼순서와 VLAUES() 의 컬럼순서가 동일해야한다.
+		  	
+		  	각 괄호의 컬럼 네이밍으로 매칭이 되는것이 아니라 컬럼의 순서대로 매칭이 되기때문이다. 
+		  -->
+	
+		INSERT INTO HYK_BRD_TBL
+		(	
+			  HYK_SEQ			/* 글번호 */
+			, HYK_TITLE  		/* 제목 */
+			, HYK_CONTENT		/* 내용 */
+			, HYK_REG_USR		/* 작성자 */
+			, HYK_BRD_PWD		/* 비밀번호 */
+			, HYK_REG_DAT		/* 작성일자 */
+			, HYK_REG_TME		/* 작성시간 */
+			, HYK_UPT_DAT		/* 수정일자 */
+			, HYK_UPT_TME		/* 수정시간 */
+		)
+		VALUES
+		(
+			  #{HYK_SEQ}
+			, #{HYK_TITLE}
+			, #{HYK_CONTENT}
+			, #{HYK_REG_USR}
+			, #{HYK_BRD_PWD}
+			, DATE_FORMAT(NOW(), "%Y%m%d")
+			, DATE_FORMAT(NOW(), "%h%i%s")
+			, DATE_FORMAT(NOW(), "%Y%m%d")
+			, DATE_FORMAT(NOW(), "%h%i%s")
+		)
+	</insert>
 
 </mapper>
