@@ -42,9 +42,7 @@ $(function() {
 			
 			// 페이지 오픈 함수
 			loadLocation : function() {
-				cmmn.util.Request.loadUrl("web/rsv/stl/list").done(function(){
-					
-				});
+
 			},
 			
 			// 버튼 이벤트 함수
