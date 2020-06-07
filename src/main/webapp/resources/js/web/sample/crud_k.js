@@ -181,6 +181,38 @@ $(function() {
 				 * >> HYK_REG_USR=NameParameter&HYK_TITLE=TitleParameter&HYK_CONTENT=ContentParameter
 				 */
 				
+				
+				/*
+				
+				 사용자 ID는 첫 글자는 대문자로 시작해야 하며 두 번째 부터 끝까지는 영문자 또는 숫자로만 이루어져야 한다.
+	 			그리고 총 글자수는 5글자 이상 10글자 이하이어야 한다.
+				var regExp = /^[A-Z][A-Za-z0-9]{4,9}$/;
+				 
+				 암호는 8글자 이상 15글자 이하의 영문자, 숫자, 특수기호가 혼합된 것이어야 한다.
+				 var regExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).*$/g;
+				
+				email을 검사하는 정규표현식 객체 생성하기
+				var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+				
+				전화번호를 검사하는 정규표현식 객체 생성하기
+				var regExp = /^0[1-9][0-9]{0,1}[1-9][0-9]{2,3}[0-9]{4}$/;
+				
+				생일
+				var regExp = /^[12][0-9]{3}$/;
+				
+				주민번호
+				var regExp = /^[0-9]{6}[1-4][0-9]{6}$/;
+				
+				
+				ajax 통신을 하기인전에 알아두어야할 가장 기본적인 컨트롤러에 폼데이터를 보내주는 방법
+				
+				var frm = document.registerFrm;
+				frm.action = "register.do";
+				frm.method = "post";
+				frm.submit();
+				
+				 */
+				
 				_self.gParam = $("form[name=frm_crud_k]").serialize();
 				
 				return true;

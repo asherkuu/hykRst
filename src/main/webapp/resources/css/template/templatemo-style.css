@@ -31,8 +31,13 @@ p:last-child { margin-bottom: 0; }
 }
 
 .tm-container-outer {
-    max-width: 1400px;
-    margin: 0 auto;    
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    bottom: 0px;
+    padding: 20px 0;
+    position: absolute;  
 }
 
 .tm-content-box { box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); }
@@ -56,7 +61,7 @@ p:last-child { margin-bottom: 0; }
 .btn-primary:hover { background: #c66995; }
 .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link { padding: 50px 35px; }
 
-/* Çì´õ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 
 .tm-top-bar {
     position: fixed;

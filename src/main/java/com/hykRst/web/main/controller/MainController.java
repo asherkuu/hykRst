@@ -22,7 +22,6 @@ import com.hykRst.web.main.service.MainService;
  */
 
 @Controller
-@RequestMapping(value = "/wb/ma")
 public class MainController {
 
 	@Autowired
@@ -32,7 +31,7 @@ public class MainController {
 	 * 메인 페이지 조회
 	 * @return "web/main/index.jsp"
 	 */
-	@RequestMapping(value = "/idx.do")
+	@RequestMapping(value = "/wb/ma/idx.do")
 	public String getMainPage(Model md) throws Exception {
 
 		// 시간조회
@@ -41,4 +40,12 @@ public class MainController {
 		
 		return "web/main/index.tiles-w";
 	}
+	
+	/**
+	 * 셔틀버스 화면
+	 */
+	@RequestMapping(value = "/shuttle/outline/")
+	public String outline() throws Exception {
+		return "web/shuttle/outline.tiles-w";
+	}	
 }
