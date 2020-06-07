@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="web.crud_k">
+<mapper namespace="sample.crud_k">
 	
-	<select id="selectCrud_kList" parameterType="Map" resultType="egovMap">
+	<select id="selectListCount_Crud_k" parameterType="Map" resultType="int">
+		SELECT
+			   COUNT(*) AS TOTAL_COUNT  
+		  FROM HYK_BRD_TBL A
+	</select>
+	
+	<select id="selectList_Crud_k" parameterType="Map" resultType="egovMap">
+		SELECT * 
+		  FROM (
+		  		SELECT
+					   A.HYK_SEQ	 
+					 , A.HYK_TITLE
+					 , A.HYK_CONTENT
+					 , A.HYK_REG_USR
+					 , A.HYK_REG_DAT
+					 , A.HYK_REG_TME
+					 , @ROWNUM := @ROWNUM + 1 AS RNUM   
+				  FROM HYK_BRD_TBL A
+				     , (SELECT @ROWNUM:=0) R
+		  	   ) A
+	  	   <if test="startPageNo != null and startPageNo != '' ">
+	  	   		<if test="endPageNo != null and endPageNo != '' ">
+	  	   		</if>
+	  	   </if>
+	  	   		WHERE A.RNUM BETWEEN #{startPageNo} AND #{endPageNo}
+	  	   		
+	</select>
+	
+	<select id="selectDetail_Crud_k" parameterType="Map" resultType="egovMap">
 		SELECT
 			   A.HYK_SEQ	 
 			 , A.HYK_TITLE
@@ -11,9 +39,10 @@
 			 , A.HYK_REG_DAT
 			 , A.HYK_REG_TME   
 		  FROM HYK_BRD_TBL A
+		 WHERE HYK_SEQ = #{HYK_SEQ}
 	</select>
 	
-	<insert id="postCrud_kIns" parameterType="Map"> 
+	<insert id="insert_Crud_k" parameterType="Map"> 
 		<selectKey keyProperty="HYK_SEQ" resultType="String" order="BEFORE">
 			SELECT IFNULL(MAX(HYK_SEQ) ,0) + 1 AS HYK_SEQ
 			  FROM HYK_BRD_TBL
@@ -62,5 +91,23 @@
 			, DATE_FORMAT(NOW(), "%h%i%s")
 		)
 	</insert>
+	
+	<update id="update_Crud_k" parameterType="Map">
+		UPDATE HYK_BRD_TBL
+		   SET 
+		   	   HYK_TITLE  	=	#{HYK_TITLE}                	/* 제목 */  
+			 , HYK_CONTENT	=	#{HYK_CONTENT}              	/* 내용 */  
+			 , HYK_REG_USR	=	#{HYK_REG_USR}              	/* 작성자 */ 
+			 , HYK_BRD_PWD	=	#{HYK_BRD_PWD}              	/* 비밀번호 */			 		
+			 , HYK_UPT_DAT	=	DATE_FORMAT(NOW(), "%Y%m%d")	/* 수정일자 */
+			 , HYK_UPT_TME	=	DATE_FORMAT(NOW(), "%h%i%s")	/* 수정시간 */ 
+		 WHERE HYK_SEQ		=	#{HYK_SEQ}                  	/* 글번호 */	 
+	</update>
+	
+	<delete id="delete_Crud_k" parameterType="Map">
+		DELETE FROM HYK_BRD_TBL 
+		 WHERE HYK_SEQ 		= #{HYK_SEQ} 
+<!-- 		   AND HYK_BRD_PWD 	= #{HYK_BRD_PWD}   -->
+	</delete>
 
 </mapper>

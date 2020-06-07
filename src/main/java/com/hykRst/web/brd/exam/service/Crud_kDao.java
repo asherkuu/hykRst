@@ -27,18 +27,36 @@ public class Crud_kDao {
 	@Resource(name = "sqlSession")
 	private SqlSessionTemplate sqlSession;
 	
-	public String preFix = "web.crud_k.";
+	public String preFix = "sample.crud_k.";
 
+	// 전체 카운트 조회
+	public int selectListCount_Crud_k() {
+		return sqlSession.selectOne(preFix + "selectListCount_Crud_k");
+	}
+	
 	// 조회
-	public List<Map<String, Object>> getCrud_kList() throws Exception {
-		return sqlSession.selectList(preFix + "selectCrud_kList");
+	public List<Map<String, Object>> selectList_Crud_k(Map<String, Object> param) throws Exception {
+		return sqlSession.selectList(preFix + "selectList_Crud_k", param);
 	}
 
+	// 상세
+	public Map<String, Object> selectDetail_Crud_k(int HYK_SEQ) {
+		return sqlSession.selectOne(preFix + "selectDetail_Crud_k", HYK_SEQ);
+	}
+	
 	// 등록
-	public int postCrud_kIns(Map<String, Object> param) {
-		return sqlSession.insert(preFix + "postCrud_kIns", param);
+	public int insert_Crud_k(Map<String, Object> param) {
+		return sqlSession.insert(preFix + "insert_Crud_k", param);
 	}
 
-	
-	
+	// 수정
+	public int update_Crud_k(Map<String, Object> param) {
+		return sqlSession.update(preFix + "update_Crud_k", param);
+	}
+
+	// 삭제
+	public int delete_Crud_k(Map<String, Object> param) {
+		return sqlSession.delete(preFix + "delete_Crud_k", param);
+	}
+
 }

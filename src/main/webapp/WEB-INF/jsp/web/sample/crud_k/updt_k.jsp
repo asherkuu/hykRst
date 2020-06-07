@@ -16,6 +16,8 @@
 
 					<span class="section">Throw your worries away !</span>
 					
+					<input type="hidden" id="HYK_SEQ" name="HYK_SEQ" value="${dtl.hykSeq}">
+					
 					<!-- Name -->
 					<div class="item form-group">
 						<label class="col-form-label col-md-3 col-sm-3 label-align" for="HYK_REG_USR">
@@ -23,7 +25,7 @@
 						</label>
 						<div class="col-md-6 col-sm-6">
 							<input type="text" id="HYK_REG_USR" name="HYK_REG_USR" class="form-control" data-validate-length-range="6" 
-								data-validate-words="2" placeholder="both name(s) e.g Jon Doe" required="required">
+								data-validate-words="2" placeholder="both name(s) e.g Jon Doe" required="required" value="${dtl.hykRegUsr}">
 						</div>
 					</div>
 					
@@ -34,7 +36,7 @@
 						</label>
 						<div class="col-md-6 col-sm-6">
 							<input type="text" id="HYK_TITLE" name="HYK_TITLE" class="form-control" data-validate-length-range="6" 
-								data-validate-words="2" required="required">
+								data-validate-words="2" required="required" value="${dtl.hykTitle}">
 						</div>
 					</div>
 					
@@ -44,7 +46,7 @@
 							Textarea <span class="required">*</span>
 						</label>
 						<div class="col-md-6 col-sm-6">
-							<textarea id="HYK_CONTENT" name="HYK_CONTENT" class="form-control" cols="3" rows="5" required="required" ></textarea>
+							<textarea id="HYK_CONTENT" name="HYK_CONTENT" class="form-control" cols="3" rows="5" required="required">${dtl.hykContent}</textarea>
 						</div>
 					</div>
 					
@@ -63,8 +65,8 @@
 					<div class="ln_solid"></div>
 					<div class="form-group">
 						<div class="col-md-6 offset-md-3">
-							<input type="button" id="btnCancel_ins" class="btn btn-primary" value="Cancel">
-							<input type="button" id="btnSubmit_ins"  class="btn btn-success" value="Submit"/>
+							<input type="button" id="btnCancel_updt" class="btn btn-primary" value="Cancel">
+							<input type="button" id="btnSubmit_updt"  class="btn btn-success" value="Submit"/>
 						</div>
 					</div>
 					

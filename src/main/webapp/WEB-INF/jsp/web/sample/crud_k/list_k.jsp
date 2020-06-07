@@ -29,17 +29,20 @@
 
 					<c:forEach var="list" items="${list}" varStatus="status">
 						<div class="table-row content">
-							<div class="cell" data-title="No">${list.hykSeq }</div>
+							<div class="cell" data-title="No">${list.hykSeq}</div>
 							<div class="cell title" data-title="Title">${list.hykTitle}</div>
 							<div class="cell" data-title="Hits">32</div>
 							<div class="cell" data-title="Author">${list.hykRegUsr}</div>
-							<div class="cell" data-title="Date">${list.hykRegTme }</div>
+							<div class="cell" data-title="Date">${list.hykRegTme}</div>
 						</div>
 					</c:forEach>
 				</div>
 			</div>
-
 		</div>
 	</div>
-
+	
+	<div class="pagination-flex">
+		${pagination}
+	</div>
+	
 </div>
