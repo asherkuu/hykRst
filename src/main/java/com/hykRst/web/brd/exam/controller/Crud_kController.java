@@ -42,7 +42,6 @@ public class Crud_kController {
 	
 	/**
 	 * 아웃라인 목록 조회 화면
-	 * @return 
 	 */
 	@RequestMapping(value = "/outline/")
 	public String outline() throws Exception {
@@ -51,7 +50,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판샘플 목록 조회 화면
-	 * @return 
 	 */
 	@RequestMapping(value = "/list/", method = RequestMethod.GET)
 	@ResponseBody
@@ -87,7 +85,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판샘플 상세 조회 화면
-	 * @return 
 	 */
 	@RequestMapping(value = "/dtl/", method={RequestMethod.GET},produces="application/json;charset=UTF-8")
 	@ResponseBody
@@ -99,8 +96,6 @@ public class Crud_kController {
 			int HYK_SEQ = cn;
 			Map<String, Object> dtl = crud_kService.selectDetail_Crud_k(HYK_SEQ);
 
-			
-			
 			// 존재하지 않는 게시물인 경우
 			if(dtl == null) {
 				
@@ -124,7 +119,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판샘플 등록 화면
-	 * @return 
 	 */
 	@RequestMapping(value = "/ins/")
 	public String ins() throws Exception {
@@ -133,7 +127,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판샘플 등록 이벤트
-	 * @return 
 	 */
 	@RequestMapping(value = "/insert_Crud_k.do/", method={RequestMethod.POST},produces="application/json;charset=UTF-8")
 	@ResponseBody
@@ -158,7 +151,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판샘플 수정 화면
-	 * @return 
 	 */
 	@RequestMapping(value = "/updt/", method={RequestMethod.GET},produces="application/json;charset=UTF-8")
 	@ResponseBody
@@ -193,7 +185,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판 수정 이벤트
-	 * @return 
 	 */
 	@RequestMapping(value = "/update_Crud_k.do/", method={RequestMethod.POST},produces="application/json;charset=UTF-8")
 	@ResponseBody
@@ -218,7 +209,6 @@ public class Crud_kController {
 	
 	/**
 	 * 게시판 삭제 이벤트
-	 * @return 
 	 */
 	@RequestMapping(value = "/delete_Crud_k.do/", method={RequestMethod.POST},produces="application/json;charset=UTF-8")
 	@ResponseBody

@@ -11,7 +11,7 @@
 		<div style="text-align: center; margin-top: 30px;">
 
 			<div class="btn-container">
-				<button class="icon-btn add-btn" id="btnAdd">
+				<button class="icon-btn add-btn" id="btnAdd_list">
 					<div class="add-icon"></div>
 					<div class="btn-txt">ADD</div>
 				</button>

@@ -135,11 +135,11 @@ $(function() {
 				$("#btnCancel_updt").on("click", function(){
 					
 					var result = confirm("Data will be erase.");
+					
 					if(result) {
+						
 						var contentNumber = $("#HYK_SEQ").val();
 						javascript:location.href="/sample/crud_k/dtl/?cn="+contentNumber;
-					} else {
-						alert("Good choice.")
 					}
 				});
 				
@@ -197,6 +197,18 @@ $(function() {
 			// 등록	
 			insert_Crud_k : function(param) { 
 				
+				cmmn.util.Request.requestAjax("/sample/crud_k/insert_Crud_k.do/", param).done(function(result){
+					
+					if(result.SUCCESS) {
+						alert("등록되었습니다.");
+						javascript:location.href="/sample/crud_k/list/";
+					} else {
+						alert("등록에 실패하였습니다.");
+						return false;
+					}
+				});
+				
+				/*
 				$.ajax({
 					url  : "/sample/crud_k/insert_Crud_k.do/",
 					data : param,
@@ -215,11 +227,27 @@ $(function() {
 						alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
 					}
 				});
+				*/
+				
 			},
 			
 			// 수정	
 			update_Crud_k : function(param) { 
 				
+				cmmn.util.Request.requestAjax("/sample/crud_k/update_Crud_k.do/", param).done(function(result){
+					
+					if(result.SUCCESS) {
+						alert("수정되었습니다.");
+						
+						var contentNumber = $("#HYK_SEQ").val();
+						javascript:location.href="/sample/crud_k/dtl/?cn="+contentNumber;
+					} else {
+						alert("수정에 실패하였습니다.");
+						return false;
+					}
+				});
+				
+				/*
 				$.ajax({
 					url  : "/sample/crud_k/update_Crud_k.do/",
 					data : param,
@@ -240,11 +268,25 @@ $(function() {
 						alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
 					}
 				});
+				*/
+				
 			},
 			
 			// 삭제	
 			delete_Crud_k : function(param) { 
 				
+				cmmn.util.Request.requestAjax("/sample/crud_k/delete_Crud_k.do/", param).done(function(result){
+					
+					if(result.SUCCESS) {
+						alert("삭제되었습니다.");
+						javascript:location.href="/sample/crud_k/list/";
+					} else {
+						alert("삭제에 실패하였습니다.");
+						return false;
+					}
+				});
+				
+				/*
 				$.ajax({
 					url  : "/sample/crud_k/delete_Crud_k.do/",
 					data : param,
@@ -263,10 +305,47 @@ $(function() {
 						alert("code: "+request.status+"\n"+"message: "+request.responseText+"\n"+"error: "+error);
 					}
 				});
+				*/
 			},
+			
 			
 	};
 	
 	_class.open();
 	
 }); 
+
+
+/*	그냥 참조용임
+ * 
+ * 
+// ajax 파일업로드 예시
+var fromData = new Formdata($("#file-form")[0]);
+
+$.ajax({
+	type : "POST",
+	enctype: 'multipart/form-data',
+	url : "url/url.do",
+	data : formData,
+	processData : false,
+	contentType : false,
+	success : function(data){
+		
+	}, error : function(){
+		
+	}
+});
+
+파일 다운로드
+var xhr = new HMLHttpRequest();
+xhr.open("POST", "url/url.do", true);
+xhr.responseType = "blob";
+xhr.onload = function(e){
+	var blob = xhr.response;
+	var link = document.createElemente('a');
+	link.href = window.URL.createObjectURL(blob);
+	link.download = "fileName";
+	link.click();
+},bind(this)
+xhr.send(JSON.stringify(param));
+*/	

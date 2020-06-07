@@ -21,13 +21,13 @@
 					 , @ROWNUM := @ROWNUM + 1 AS RNUM   
 				  FROM HYK_BRD_TBL A
 				     , (SELECT @ROWNUM:=0) R
+				 ORDER BY HYK_SEQ DESC   
 		  	   ) A
-	  	   <if test="startPageNo != null and startPageNo != '' ">
-	  	   		<if test="endPageNo != null and endPageNo != '' ">
-	  	   		</if>
-	  	   </if>
-	  	   		WHERE A.RNUM BETWEEN #{startPageNo} AND #{endPageNo}
-	  	   		
+  	   <if test="startPageNo != null and startPageNo != '' ">
+  	   		<if test="endPageNo != null and endPageNo != '' ">
+	  	   WHERE A.RNUM BETWEEN #{startPageNo} AND #{endPageNo}
+  	   		</if>
+  	   </if>
 	</select>
 	
 	<select id="selectDetail_Crud_k" parameterType="Map" resultType="egovMap">

@@ -15,12 +15,20 @@ import javax.servlet.http.HttpServletRequest;
  * @ 2020.06.07 HYK         최초생성
  *
  * @author HYK
- * @since 2020.05.21
+ * @since 2020.06.07
  * @version 1.0
  *
  */
 public class PaginationRenderer {
 
+	/**
+	 * Version : 1.0
+	 * function: initPagination
+	 * Description : 페이징 메소드
+	 * Usage   : PaginationRenderer.initPagination(request, totalCount, selectedPage)
+	 * Author  : HYK
+	 * Comment : 타 컨트롤러에서 해당 메소드를 호출하면 자동으로 페이징을 생성해주는 메소드이다.
+	 */
 	public static Map<String, Object> initPagination(HttpServletRequest request, int totalCount, int selectedPage) {
 		
 		Map<String, Object> result = new HashMap<String, Object>();	
@@ -94,7 +102,6 @@ public class PaginationRenderer {
 			html += "<a href='?page="+(pageNo)+"'> > </a>";	
 		}
 		
-//		html += "<div class='pagination-bar'></div>";
 		html += "</ul>";
 		html += "</div>";
 		
